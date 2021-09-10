@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhangyu.myproject.mapper.UserMapper">
+
+    <resultMap id="BaseResultMap" type="com.zhangyu.myproject.domain.User">
+            <id property="id" column="ID" jdbcType="INTEGER"/>
+            <result property="username" column="USERNAME" jdbcType="VARCHAR"/>
+            <result property="password" column="PASSWORD" jdbcType="VARCHAR"/>
+            <result property="age" column="AGE" jdbcType="INTEGER"/>
+            <result property="birthday" column="BIRTHDAY" jdbcType="DATE"/>
+            <result property="icon" column="ICON" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        ID,USERNAME,PASSWORD,
+        AGE,BIRTHDAY,ICON
+    </sql>
+</mapper>
