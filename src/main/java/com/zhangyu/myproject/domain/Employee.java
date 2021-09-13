@@ -10,11 +10,11 @@ import lombok.Data;
 
 /**
  * 
- * @TableName tbl_user
+ * @TableName tbl_employee
  */
-@TableName(value ="tbl_user")
+@TableName(value ="tbl_employee")
 @Data
-public class User implements Serializable {
+public class Employee implements Serializable {
     /**
      * 
      */
@@ -60,7 +60,7 @@ public class User implements Serializable {
         if (getClass() != that.getClass()) {
             return false;
         }
-        User other = (User) that;
+        Employee other = (Employee) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
             && (this.getUsername() == null ? other.getUsername() == null : this.getUsername().equals(other.getUsername()))
             && (this.getPassword() == null ? other.getPassword() == null : this.getPassword().equals(other.getPassword()))

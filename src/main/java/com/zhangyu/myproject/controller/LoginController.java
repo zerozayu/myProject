@@ -7,12 +7,11 @@ import org.springframework.web.bind.annotation.*;
  * @CreateTime 2021/9/10 15:07
  **/
 
-@RestController("/test")
+@RestController
 public class LoginController {
 
     @PostMapping("/login")
-    public String login(@RequestParam String username, @RequestParam String password){
-
+    public String login(@RequestParam String username, @RequestParam String password) {
 
         return "ok";
     }

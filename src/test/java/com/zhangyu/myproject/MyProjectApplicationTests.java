@@ -14,51 +14,10 @@ import java.util.*;
 @SpringBootTest
 class MyProjectApplicationTests {
     @Autowired
-    UserMapper userMapper;
-
-    @Autowired
     RoleMapper roleMapper;
 
     @Autowired
     RoleService roleService;
-
-    @Test
-    void contextLoads() {
-        User user = userMapper.selectById(1);
-        System.out.println(user);
-    }
-
-    @Test
-    void test1() {
-        Map<String, Object> map = new HashMap<>();
-        // map.put("tablename", "tbl_user");
-        map.put("id", 4);
-        Map<String, Object> map1 = userMapper.selectById1("tbl_user", map);
-        System.out.println(map1);
-    }
-
-    @Test
-    void test2(){
-        User user = new User(4,"liulei",13,new Date(),"qqq");
-        int i = userMapper.updateById(user);
-        System.out.println(i);
-        System.out.println(userMapper.selectById(1));
-
-    }
-
-    @Test
-    void tset3(){
-        User user = new User("zhangyu",14,new Date(),"qqq");
-        System.out.println(userMapper.insert(user));
-        System.out.println(user);
-    }
-
-    @Test
-    void tset4(){
-
-        List<Integer> list = Arrays.asList(1,2,3);
-        System.out.println(userMapper.deleteByIds(list));
-    }
 
 
     @Test
