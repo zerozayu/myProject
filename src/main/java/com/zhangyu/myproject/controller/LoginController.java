@@ -1,19 +1,27 @@
 package com.zhangyu.myproject.controller;
 
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
- * @Author zhangyu
+ * @author zhangyu
  * @CreateTime 2021/9/10 15:07
  **/
 
 @RestController
 public class LoginController {
 
-    @PostMapping("/login")
-    public String login(@RequestParam String username, @RequestParam String password) {
+    @PostMapping("/toMain")
+    public ModelAndView toMain(){
+        // 重定向
+        return new ModelAndView("redirect:main.html");
+        // return "redirect:/main";
+    }
 
-        return "ok";
+    @PostMapping("/toError")
+    public ModelAndView toError(){
+        // 重定向
+        return new ModelAndView("redirect:error.html");
     }
 
 }
